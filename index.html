@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good day to you</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<table id="headerContainer">
+    <tr>
+        <td><h1 id="mainHeaderText">Лабораторная работа №1.</h1></td>
+        <td id="rightHeaderPart">
+            <h2>Вариант № 13209</h2>
+            <h3>Севрюкова Екатерина, P3213</h3>
+        </td>
+    </tr>
+</table>
+<table id="imageContainer">
+    <tr>
+        <td id="imageCell"><img src="img/graf.png" alt="Grid"></td>
+    </tr>
+</table>
+<table id="inputContainer">
+    <tr id="inputDataHeader">
+        <td colspan="100%">
+            <h2>Введите данные:</h2>
+        </td>
+    </tr>
+
+
+
+    <tr id="inputX">
+        <td>
+            X:
+        </td>
+
+        <td id="xCoordinate" class="options">
+            <label>
+                <input type="radio" name="x" value="1">
+                1
+            </label>
+            <label>
+                <input type="radio" name="x" value="1.5">
+                1.5
+            </label>
+            <label>
+                <input type="radio" name="x" value="2">
+                2
+            </label>
+            <label>
+                <input type="radio" name="x" value="2.5">
+                2.5
+            </label>
+            <label>
+                <input type="radio" name="x" value="3">
+                3
+            </label>
+        </td>
+    </tr>
+    <tr id="inputY">
+        <td>
+            <label for="yCoordinate">
+                Y:
+            </label>
+
+        </td>
+        <td>
+            <input type="text" id="yCoordinate" name=y size=100% placeholder="Введите число в интервале (-3; 3)" maxlength="7">
+        </td>
+    </tr>
+    <tr id="inputR">
+        <td>
+            <label for="rCoordinate">
+                R:
+            </label>
+
+        </td>
+        <td>
+            <input type="text" id="rCoordinate" name=r size=100% placeholder="Введите число в интервале (1; 4)" maxlength="7">
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="100%" id="buttonContainer">
+            <button class="submit-button" type="submit" onclick="submit()">Let's go!</button>
+        </td>
+    </tr>
+</table>
+
+<table id="result-table">
+    <tr class="table-header">
+        <th>X</th>
+        <th>Y</th>
+        <th>R</th>
+        <th>Локальное время</th>
+        <th>Время исполнения</th>
+        <th>Попадание</th>
+    </tr>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/func.js"></script>
+</body>
+</html>

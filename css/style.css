@@ -1,0 +1,126 @@
+body{
+    background: linear-gradient(to right, #4a74b5, #ac4db5);
+}
+table#headerContainer{
+    width: 100%;
+    background: rgba(255, 0, 0, .02);
+}
+h1#mainHeaderText{
+    margin-left: 1%;
+    opacity: 100%;
+    font-family: serif;
+    color: rgba(255, 252, 238, 0.63);
+}
+td#rightHeaderPart{
+    padding-right: 2%;
+    font-family: serif;
+    color: rgb(231, 194, 195);
+    text-align: right;
+}
+table#imageContainer{
+    padding-top: 5%;
+    width: 100%;
+    text-align: center;
+}
+td#imageCell{
+    text-align: center;
+    mix-blend-mode: multiply;
+}
+table#inputContainer{
+    width: 30%;
+    text-align: center;
+    border: 0;
+    margin: auto    ;
+    border-spacing: 0 10px;
+}
+table#inputContainer tr{
+    margin-left: 10%;
+    font-family: monospace, "JetBrains Mono Medium" ;
+    font-size: 14px;
+    color: whitesmoke;
+}
+tr#inputDataHeader{
+    text-align: center;
+}
+tr#inputX{
+    text-align: left;
+}
+input#xCoordinate{
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0 solid;
+}
+tr#inputY{
+    text-align: center;
+}
+tr#inputR{
+    text-align: left;
+
+}
+.options{
+    display: flex;
+}
+select#YSelect {
+    background: transparent;
+    color: whitesmoke;
+}
+td#YSelectRow option {
+    background-color: #4a74b5;
+    color: whitesmoke;
+}
+label:not([for]) {
+    width: 100%;
+    background: rgba(255, 156, 161, 0.2);
+    padding: 0 2px;
+    border: solid 0 transparent;
+    opacity: 80%;
+    text-align: center;
+
+}
+label + label {
+    margin-inline-start: 2%;
+}
+td#buttonContainer{
+    text-align: center;
+}
+.submit-button{
+    background-color: rgba(76, 175, 64, 0.65);
+    border: none;
+    color: white;
+    padding: 2% 5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 5% 5% 5% 50px;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background-color: rgba(76, 175, 64, 0.9);
+}
+table#result-table{
+    width: 100%;
+    background-color: rgba(250, 235, 215, 0.64);
+    transition-property: background-color;
+    transition-duration: 3s;
+}
+table#result-table tr {
+    text-align: center;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+.yes-no-marker {
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+    animation-duration: 1s;
+    animation-name: slideIn;
+    width: 32px;
+    height: 32px;
+}
+@keyframes slideIn {
+    from {
+        width: 0;
+        height: 0;
+    }
+    to {
+        width: 32px;
+        height: 32px;
+    }
+}
