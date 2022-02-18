@@ -1,59 +1,79 @@
 body{
-    background: linear-gradient(to right, #4a74b5, #ac4db5);
+    background-image: url("../img/back.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
+
+
 table#headerContainer{
     width: 100%;
-    background: rgba(255, 0, 0, .02);
+    border: 5px black;
 }
 h1#mainHeaderText{
     margin-left: 1%;
     opacity: 100%;
-    font-family: serif;
-    color: rgba(255, 252, 238, 0.63);
+    font-family: monospace;
+    color: papayawhip;
+    text-align: left;
+
 }
+
+td#leftHeaderPart{
+    background: dimgray;
+}
+
 td#rightHeaderPart{
     padding-right: 2%;
-    font-family: serif;
-    color: rgb(231, 194, 195);
+    font-family: monospace;
+    color: lavenderblush;
     text-align: right;
+    background: dimgray;
+
 }
+
 table#imageContainer{
     padding-top: 5%;
     width: 100%;
     text-align: center;
+    border-spacing: 5px;
 }
 td#imageCell{
     text-align: center;
-    mix-blend-mode: multiply;
 }
 table#inputContainer{
-    width: 30%;
+    width: 60px;
     text-align: center;
-    border: 0;
+    border: 1px;
     margin: auto    ;
     border-spacing: 0 10px;
 }
 table#inputContainer tr{
-    margin-left: 10%;
+    margin-left: 5px;
     font-family: monospace, "JetBrains Mono Medium" ;
     font-size: 14px;
     color: whitesmoke;
 }
 tr#inputDataHeader{
     text-align: center;
+    background-color: gray;
+
 }
 tr#inputX{
     text-align: left;
+    background-color: gray;
 }
-input#xCoordinate{
+input#inputX{
     background-color: rgba(255, 255, 255, 0.5);
     border: 0 solid;
 }
 tr#inputY{
     text-align: center;
+    background-color: gray;
 }
 tr#inputR{
     text-align: left;
+    background-color: gray;
 
 }
 .options{
@@ -71,7 +91,6 @@ label:not([for]) {
     width: 100%;
     background: rgba(255, 156, 161, 0.2);
     padding: 0 2px;
-    border: solid 0 transparent;
     opacity: 80%;
     text-align: center;
 

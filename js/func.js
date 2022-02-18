@@ -78,24 +78,24 @@ function validateR() {
 
 function submit() {
     if (validateX() & validateY() & validateR()) {
-        $.get("php/main.php", {
+        $.get("./main.php", {
             'x': x,
             'y': y,
             'r' : r,
             'timezone': new Date().getTimezoneOffset()
         }).done(function(PHP_RESPONSE) { // do when success callback is received
             let result = JSON.parse(PHP_RESPONSE); // take array with results
-            if (!result.isValid) {
+            if (!result[0].isValid) {
                 addToErrorMessage("Request is not valid. Try refreshing the page");
                 return;
             }
-            let newRow = result.isBlueAreaHit ? '<tr class="hit-yes">' : '<tr class="hit-no">';
-            newRow += '<td>' + result.x + '</td>';
-            newRow += '<td>' + result.y + '</td>';
-            newRow += '<td>' + result.r + '</td>';
-            newRow += '<td>' + result.userTime + '</td>';
-            newRow += '<td>' + result.execTime + '</td>';
-            newRow += '<td>' + (result.isBlueAreaHit ? '<img src="../img/tick.png" alt="Да" class="yes-no-marker">' : '<img src="../img/cross.png" alt="Нет" class="yes-no-marker">') + '</td>';
+            let newRow = result[0].isBlueAreaHit ? '<tr class="hit-yes">' : '<tr class="hit-no">';
+            newRow += '<td>' + result[0].x + '</td>';
+            newRow += '<td>' + result[0].y + '</td>';
+            newRow += '<td>' + result[0].r + '</td>';
+            newRow += '<td>' + result[0].userTime + '</td>';
+            newRow += '<td>' + result[0].execTime + '</td>';
+            newRow += '<td>' + (result[0].isBlueAreaHit ? '<h6>Да</h6>' : '<h6>Нет</h6>') + '</td>';
             $('#result-table tr:first').after(newRow);
             document.getElementById("result-table").style.backgroundColor = `rgba(250, 235, 215, ${Math.random() * 0.6 + 0.2})`;
         }).fail(function (error) {
